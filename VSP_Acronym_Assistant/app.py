@@ -32,3 +32,17 @@ def display_menu(self):
         print("5. Load Acronyms from File")
         print("6. Quit")
 
+  def run(self):
+        """
+        Run the main menu loop.
+        """
+        while True:
+            self.display_menu()
+            choice = input("Enter your choice (1-6): ")
+
+            if choice == "1":
+                short = input("Enter acronym: ")
+                definition = input("Enter definition: ")
+                category = input("Enter category: ")
+                self.manager.add_acronym(short, definition, category)
+                print("Acronym added successfully.")
