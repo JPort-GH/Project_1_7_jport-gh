@@ -64,3 +64,6 @@ elif choice == "3":
                 else:
                     print("No acronyms found in that category.")
 
+elif choice == "4":
+                self.manager.save_to_file()
+                print("Acronyms saved to file.")
