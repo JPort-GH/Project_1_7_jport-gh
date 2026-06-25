@@ -21,3 +21,31 @@ class AcronymManager:
         self.acronyms = []
 
     # Methods will be added in later milestones
+def add_acronym(self, short: str, definition: str, category: str):
+        """
+        Add a new acronym to the list.
+
+        Parameters:
+            short (str): The acronym text.
+            definition (str): The full meaning.
+            category (str): The category it belongs to.
+        """
+        new_acronym = Acronym(short, definition, category)
+        self.acronyms.append(new_acronym)
+
+    def search_acronym(self, short: str):
+        """
+        Search for an acronym by its short text (case-insensitive).
+
+        Parameters:
+            short (str): The acronym text to search for.
+
+        Returns:
+            Acronym or None: The matching acronym, if found.
+        """
+        short = short.lower()
+        for acronym in self.acronyms:
+            if acronym.short.lower() == short:
+                return acronym
+        return None
+
