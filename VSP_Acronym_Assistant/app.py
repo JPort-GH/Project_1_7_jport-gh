@@ -46,3 +46,12 @@ def display_menu(self):
                 category = input("Enter category: ")
                 self.manager.add_acronym(short, definition, category)
                 print("Acronym added successfully.")
+
+  elif choice == "2":
+                short = input("Enter acronym to search: ")
+                result = self.manager.search_acronym(short)
+                if result:
+                    print(result)
+                else:
+                    print("Acronym not found.")
+
