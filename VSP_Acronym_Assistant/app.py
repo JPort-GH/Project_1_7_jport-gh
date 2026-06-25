@@ -19,8 +19,7 @@ class AcronymApp:
         """Initialize the app with an AcronymManager instance."""
         self.manager = AcronymManager()
 
-    # Menu logic will be added in later milestones
-def display_menu(self):
+    def display_menu(self):
         """
         Display the main menu options.
         """
@@ -32,7 +31,7 @@ def display_menu(self):
         print("5. Load Acronyms from File")
         print("6. Quit")
 
-  def run(self):
+    def run(self):
         """
         Run the main menu loop.
         """
@@ -47,7 +46,7 @@ def display_menu(self):
                 self.manager.add_acronym(short, definition, category)
                 print("Acronym added successfully.")
 
-  elif choice == "2":
+            elif choice == "2":
                 short = input("Enter acronym to search: ")
                 result = self.manager.search_acronym(short)
                 if result:
@@ -55,7 +54,7 @@ def display_menu(self):
                 else:
                     print("Acronym not found.")
 
-elif choice == "3":
+            elif choice == "3":
                 category = input("Enter category: ")
                 results = self.manager.list_by_category(category)
                 if results:
@@ -64,16 +63,15 @@ elif choice == "3":
                 else:
                     print("No acronyms found in that category.")
 
-elif choice == "4":
+            elif choice == "4":
                 self.manager.save_to_file()
                 print("Acronyms saved to file.")
-
 
             elif choice == "5":
                 self.manager.load_from_file()
                 print("Acronyms loaded from file.")
 
-elif choice == "6":
+            elif choice == "6":
                 print("Goodbye!")
                 break
 
