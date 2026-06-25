@@ -21,6 +21,7 @@ class AcronymManager:
         self.acronyms = []
 
     # Methods will be added in later milestones
+
 def add_acronym(self, short: str, definition: str, category: str):
         """
         Add a new acronym to the list.
@@ -48,4 +49,19 @@ def add_acronym(self, short: str, definition: str, category: str):
             if acronym.short.lower() == short:
                 return acronym
         return None
+
+def list_by_category(self, category: str):
+        """
+        Return all acronyms that match the given category (case-insensitive).
+
+        Parameters:
+            category (str): The category to filter by.
+
+        Returns:
+            list: A list of Acronym objects.
+        """
+        category = category.lower()
+        return [a for a in self.acronyms if a.category.lower() == category]
+
+
 
