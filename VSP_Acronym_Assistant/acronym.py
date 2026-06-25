@@ -25,3 +25,9 @@ class Acronym:
         self.short = short
         self.definition = definition
         self.category = category
+
+    def __str__(self):
+        """
+        Return a readable string representation of the acronym.
+        """
+        return f"{self.short}: {self.definition} ({self.category})" 
