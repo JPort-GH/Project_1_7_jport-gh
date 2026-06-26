@@ -24,12 +24,13 @@ class AcronymApp:
         Display the main menu options.
         """
         print("\n--- VSP Acronym Assistant ---")
-        print("1. Add Acronym")
-        print("2. Search Acronym")
-        print("3. List by Category")
-        print("4. Save Acronyms to File")
-        print("5. Load Acronyms from File")
-        print("6. Quit")
+    print("Choose an option:")
+    print("  1 - Add Acronym")
+    print("  2 - Search Acronym")
+    print("  3 - List by Category")
+    print("  4 - Save Acronyms to File")
+    print("  5 - Load Acronyms from File")
+    print("  6 - Quit")
 
     def run(self):
         """
@@ -37,7 +38,7 @@ class AcronymApp:
         """
         while True:
             self.display_menu()
-            choice = input("Enter your choice (1-6): ")
+            choice = input("Enter your choice (1=Add, 2=Search, 3=List, 4=Save, 5=Load, 6=Quit): ")
 
             if choice == "1":
                 short = input("Enter acronym: ")
