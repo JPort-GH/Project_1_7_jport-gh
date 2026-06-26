@@ -24,13 +24,13 @@ class AcronymApp:
         Display the main menu options.
         """
         print("\n--- VSP Acronym Assistant ---")
-    print("Choose an option:")
-    print("  1 - Add Acronym")
-    print("  2 - Search Acronym")
-    print("  3 - List by Category")
-    print("  4 - Save Acronyms to File")
-    print("  5 - Load Acronyms from File")
-    print("  6 - Quit")
+        print("Choose an option:")
+        print("  1 - Search Acronym")
+        print("  2 - List by Category")
+        print("  3 - Add Acronym")
+        print("  4 - Save Acronyms to File")
+        print("  5 - Load Acronyms from File")
+        print("  6 - Quit")
 
     def run(self):
         """
